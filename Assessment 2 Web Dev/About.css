@@ -1,0 +1,465 @@
+:root {
+    font-size: 16px;
+    --purple:      #7b5dcf;
+    --purple-glow: rgba(123, 93, 207, 0.35);
+    --bg:          #13001F;
+    --text:        #D1DCDF;
+    --card-bg:     rgba(255, 255, 255, 0.04);
+    --border:      rgba(209, 220, 223, 0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: "Bungee", sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: var(--text);
+}
+
+p {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 400;
+}
+
+a {
+    font-size: 1.25rem;
+    color: var(--text);
+    text-decoration: none;
+    font-family: "Bungee";
+    transition: .5s ease;
+}
+
+.Intro{
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7b5dcf;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    overflow: auto;
+    transform: translateY(0);
+}
+
+.Intro.hide{
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.2) rotate(-20deg);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.logo-item.active {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+.logo-item.fade {
+    opacity: 0;
+    transform: scale(0.6) rotate(20deg);
+}
+
+.intro-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.Intro.hide {
+    top: -100vh;
+    opacity: 0;
+}
+
+.Logo {
+    width: 4.375rem;
+    height: 4.375rem;
+    border: 1px solid #D1DCDF;
+    background-color: #A7ACD9;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.Logo:hover {
+    border-color: #7b5dcf;
+    box-shadow: 0 0 10px #7b5dcf;
+    transform: scale(1.1);
+}
+
+.Logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.Nav {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.9375rem;
+}
+
+.Nav a:hover,
+.Nav a.nav-active {
+    color: #7b5dcf;
+}
+
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.875rem 1.25rem;
+    margin: 0;
+    border-bottom: 2px solid transparent;
+}
+
+.Main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.Content-Main {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+}
+
+.Content-Main h1 {
+    font-family: "Bungee";
+    font-size: 2.5rem;
+    color: #D1DCDF;
+    margin-bottom: 1rem;
+}
+
+.Content-Main p {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    color: #8a9aad;
+    line-height: 1.6;
+}
+
+.Content-Secondary {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+    position: relative;
+}
+
+.Content-Secondary h2 {
+    font-family: "Bungee";
+    font-size: 2rem;
+    color: #D1DCDF;
+    margin-bottom: 1rem;
+}
+
+.Content-Secondary p {
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    color: #8a9aad;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.Content-Secondary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Content-Secondary li {
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.95rem;
+    color: #8a9aad;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.Content-Secondary li:before {
+    content: "▸";
+    color: #7b5dcf;
+    position: absolute;
+    left: 0;
+}
+
+.seperator1 {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7b5dcf, transparent);
+    margin: 0 auto;
+    width: 80%;
+}
+
+.Header-Hobbies {
+    font-family: "Bungee";
+    font-size: 2.5rem;
+    color: #D1DCDF;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.Content-Hobbies{
+    background-color: #20143e91;
+    box-shadow: 0 0 50px rgba(132, 100, 219, 0.3);
+    display: grid;
+    align-self: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.Hobby-Card,
+.Hobby-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    background: rgba(123, 93, 207, 0.1);
+    border: 2px solid #7b5dcf;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Hobby-Card:hover,
+.Hobby-card:hover {
+    background: rgba(123, 93, 207, 0.25);
+    box-shadow: 0 0 20px rgba(123, 93, 207, 0.5);
+    transform: translateY(-5px);
+}
+
+.Hobby-Card h2,
+.Hobby-card h2 {
+    font-family: "Bungee";
+    font-size: 1.5rem;
+    color: #D1DCDF;
+    margin: 0;
+    text-align: center;
+}
+
+.Main-Footer {
+    margin-top: 5rem;
+    background: rgba(19, 12, 28, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid #7b5dcf7c;
+    padding: 3rem 1.25rem 1rem;
+    color: #D1DCDF;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #D1DCDF;
+    margin-top: 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    padding-bottom: 2rem;
+}
+
+
+.footer-section {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-section.branding {
+    align-items: flex-start; 
+    text-align: left;
+}
+
+
+.footer-section.links {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section.links nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+
+
+.footer-section.links h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+.footer-section a {
+    text-decoration: none;
+    color: #D1DCDF;
+    font-family: "Bungee";
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #7b5dcf;
+}
+
+/* Popup styles */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(10, 0, 20, 0.85);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.popup-overlay.show {
+    display: flex;
+}
+
+.popup-content {
+    background: rgba(19, 0, 31, 0.95);
+    border: 2px solid var(--purple);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 600px;
+    width: min(90vw, 600px);
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 0 30px rgba(123, 93, 207, 0.3);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+}
+
+.popup-close:hover {
+    color: var(--purple);
+}
+
+.popup-text h2 {
+    font-family: "Bungee", sans-serif;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.popup-text p {
+    font-family: "Source Code Pro", monospace;
+    color: #8a9aad;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.popup-text img,
+.popup-text audio {
+    margin-top: 1rem;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+#music-player {
+    display: none;
+}
+
+.music-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.music-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.music-list span {
+    font-family: "Source Code Pro", monospace;
+    color: #D1DCDF;
+}
+
+.play-button {
+    background: #7b5dcf;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.65rem 1rem;
+    cursor: pointer;
+    font-family: "Bungee";
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.play-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.audio-controls {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.audio-controls label {
+    font-family: "Source Code Pro", monospace;
+    color: #D1DCDF;
+}
+
+.volume-slider {
+    width: 100%;
+    accent-color: #7b5dcf;
+}
