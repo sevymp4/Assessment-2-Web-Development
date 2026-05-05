@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 2 Web Dev Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Assets/nijinijika.jpeg">
+    <link rel="stylesheet" href="Index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Intro">
+        <div class="logo-block">
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+        </div>
+    </div>
+    <header class="container">
+        <div class = "Header">
+            <div class="Logo">
+                <a href="Projects.html"><img src="Assets/Temporary_logo.jpg" width="70px" height="70px" alt="Logo"></a>
+            </div>
+            <div class="Nav">
+                <a href="About.html">About</a>
+                <a href="Videos.html">Videos</a>
+                <a href="Socials.html">Socials</a>
+            </div>
+        </header>
+        <section class="Main">
+            <div class="Image">
+                <img class="Main-Logo" src="Assets/Main_Logo.jpg" alt="Image of OC">
+            </div>
+            <article class="Content-Main">
+                <h1>Welcome to my Portfolio</h1>
+                <p>Hello! I'm Sevvy also known as Lanz, Im an aspiring digital artist and a cybersecurity student. In this portfolio I'll be showcasing some of my work and projects. From both Art pieces and coding projects that I have gathered throughout my journey.</p>
+            </article>
+        </section>
+        <div class="seperator1"></div>
+        <Section class="carousel">
+            <article class="carousel-group">
+                <div class="card"><img src="Assets/OC_1.jpg" alt="Project 1"></div>
+                <div class="card"><img src="Assets/Bocchi.jpg" alt="Project 2"></div>
+                <div class="card"><img src="Assets/Geats.jpg" alt="Project 3"></div>
+                <div class="card"><img src="Assets/March7th.jpeg" alt="Project 4"></div>
+                <div class="card"><img src="Assets/Sword.jpeg" alt="Project 5"></div>
+                <div class="card"><img src="Assets/Browt.jpeg" alt="Project 6"></div>
+            </article>
+            <article aria-hidden class="carousel-group">
+                <div class="card"><img src="Assets/OC_1.jpg" alt="Project 1"></div>
+                <div class="card"><img src="Assets/Bocchi.jpg" alt="Project 2"></div>
+                <div class="card"><img src="Assets/Geats.jpg" alt="Project 3"></div>
+                <div class="card"><img src="Assets/March7th.jpeg" alt="Project 4"></div>
+                <div class="card"><img src="Assets/Sword.jpeg" alt="Project 5"></div>
+                <div class="card"><img src="Assets/Browt.jpeg" alt="Project 6"></div>
+            </article>
+        </Section>
+
+
+        <div class="seperator2"></div>
+  
+        <div class="Socials">
+            <h1>Socials</h1>
+            <div class="box2">
+                <button><a href="https://www.instagram.com/sevvy.jpeg/" target="_blank" rel="noopener noreferrer">Instagram</a></button>
+                <div class="photo-box">
+                    <img src="Assets/IG.jpeg" alt="Instagram: @sevvy.jpeg">
+                </div>
+            </div>
+            <div class="box2">
+                <button><a href="https://www.youtube.com/@AlsoknownasSevy" target="_blank" rel="noopener noreferrer">YouTube</a></button>
+                <div class="photo-box">
+                    <img src="Assets/YT.jpeg" alt="YouTube: @AlsoknownasSevy">
+                </div>
+            </div>
+            <div class="box2">
+                <button><a href="https://www.tiktok.com/@sevy.mp4" target="_blank" rel="noopener noreferrer">TikTok</a></button>
+                <div class="photo-box">
+                    <img src="Assets/Tiktok.jpeg" alt="TikTok: @sevy.mp4">
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <footer class="Main-Footer">
+        <div class="footer-content">
+            <div class="footer-section branding">
+                <div class="Logo-footer-logo">
+                    <div class="Logo-Wrapper" style="position: relative;">
+                        <div class="Logo-2" onclick="toggleMusic(this)">
+                            <img src="Assets/Temporary_logo.jpg" alt="Logo">
+                        </div>
+
+                        <div id="volume-control" class="volume-popover">
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+                        </div>
+                    </div>
+
+                    <audio id="bg-music" loop muted>
+                        <source src="Assets/Flashbacker.mp3" type="audio/mpeg">
+                    </audio>                
+                </div>
+                <p>I like to code and create websites.</p>
+            </div>
+
+        <nav class="footer-section links">
+            <h3>Navigation</h3>
+            <a href="#">Dashboard</a>
+            <a href="#top">Back to Top</a>
+        </nav>
+
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Sevvy. All Rights Reserved.</p>
+    </div>
+</footer>
+    </div>
+
+    <script src="Index.js"></script>
+</body>
+</html>

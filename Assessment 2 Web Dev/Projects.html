@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Projects.css">
+    <link rel="icon" type="image/x-icon" href="Assets/nijinijika.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>Projects</title>
+</head>
+<body>
+    <div class="Intro">
+        <div class="logo-block">
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+            <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+        </div>
+    </div>
+
+    <header>
+        <div class = "Header">
+            <div class="Logo">
+                <img src="Assets/Temporary_logo.jpg" width="70px" height="70px" alt="Logo">
+            </div>
+            <div class="Nav">
+                <a href="Index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="Videos.html">Videos</a>
+                <a href="Socials.html">Socials</a>
+            </div>
+        </header>
+        <section class="Main">
+            <article class="Content-Main">
+                <h1>Projects</h1>
+                <p>Here are some of the projects that I have done, both art and coding related. These are just a few of the many projects that I have done, but these are some of my favorites that I wanted to showcase.</p>
+            </article>
+        </section>
+        <section class="project-container">
+            <h2 class="section-title">Sketches and unfinished works</h2>
+            <div class="grid-6">
+                <div class="project-card art"><img src="Assets/Sketch_1.jpg" alt="Art 1"></div>
+                <div class="project-card art"><img src="Assets/Sketch_2.jpg" alt="Art 2"></div>
+                <div class="project-card art"><img src="Assets/Sketch_3.jpg" alt="Art 3"></div>
+            </div>
+        </section>
+
+        <section class="project-container">
+            <h2 class="section-title">Development Project</h2>
+            <div class="grid-3">
+                <div class="project-card code clickable" id="vending-card" onclick="openVendingModal()">
+                    <h3>Vending Machine</h3>
+                    <p>Python Logic</p>
+                    <span class="card-cta">Click to explore →</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Vending Machine Modal -->
+        <div class="vm-modal-overlay" id="vm-modal" onclick="closeVendingModal(event)">
+            <div class="vm-modal">
+                <button class="vm-close" onclick="closeVendingModal(null, true)">✕</button>
+                <div class="vm-modal-header">
+                    <span class="vm-tag">Python</span>
+                    <h2 class="vm-title">Vending Machine</h2>
+                    <p class="vm-desc">This vending machine simulation demonstrates Python programming concepts such as functions, loops, and conditionals. It was made for my 2nd Assessment for my subject in Web Development.</p>
+                </div>
+                <div class="vm-tabs">
+                    <button class="vm-tab active" onclick="switchTab('code', this)">📄 Source Code</button>
+                    <button class="vm-tab" onclick="switchTab('sim', this)">▶ Try It Out</button>
+                </div>
+
+                <!-- Code Tab -->
+                <div class="vm-panel" id="panel-code">
+                    <div class="code-toolbar">
+                        <span class="code-filename">Real_Assessment2.py</span>
+                        <button class="copy-btn" onclick="copyCode()">Copy</button>
+                    </div>
+                    <pre class="code-block" id="code-display"></pre>
+                </div>
+
+                <!-- Simulator Tab -->
+                <div class="vm-panel hidden" id="panel-sim">
+                    <div class="terminal" id="terminal">
+                        <div class="terminal-bar">
+                            <span class="t-dot red"></span><span class="t-dot yellow"></span><span class="t-dot green"></span>
+                            <span class="t-title">vending_machine.py</span>
+                            <button class="t-reset" onclick="resetSim()">↺ Reset</button>
+                        </div>
+                        <div class="terminal-output" id="terminal-output"></div>
+                        <div class="terminal-input-row" id="input-row">
+                            <span class="t-prompt">$</span>
+                            <input type="text" class="t-input" id="t-input" placeholder="Type your input and press Enter..." onkeydown="handleInput(event)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="project-container">
+            <h2 class="section-title">Character Illustrations</h2>
+            <div class="grid-6">
+                <div class="project-card art"><img src="Assets/OC_1.jpg" alt="Character 1"></div>
+                <div class="project-card art"><img src="Assets/OC_2.jpg" alt="Character 2"></div>
+                <div class="project-card art"><img src="Assets/OC_3.png" alt="Character 3"></div>
+                <div class="project-card art"><img src="Assets/OC_4.jpg" alt="Character 4"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="Main-Footer">
+        <div class="footer-content">
+            <div class="footer-section branding">
+                <div class="Logo">
+                    <img src="Assets/Temporary_logo.jpg" width="50px" height="50px" alt="Logo">
+                </div>
+                <p>I like to code and create websites.</p>
+            </div>
+            <nav class="footer-section links">
+                <h3>Navigation</h3>
+                <div class="nav-row">
+                    <a href="Chapters.html">Dashboard</a>
+                    <a href="#top">Back to Top</a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+
+
+    <script src="projects.js"></script>
+</body>
+</html>

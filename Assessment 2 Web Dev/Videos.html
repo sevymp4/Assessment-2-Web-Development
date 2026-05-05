@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Videos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="icon" type="image/x-icon" href="Assets/nijinijika.jpeg">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <title>Videos</title>
+    </head>
+    <body>
+        <div class="Intro">
+            <div class="logo-block">
+                <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+                <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+                <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+                <span class="logo-item"><img class="intro-logo" src="Assets/Temporary_logo.jpg" alt="Logo"></span>
+            </div>
+        </div>
+
+        <header>
+            <div class = "Header">
+                <div class="Logo">
+                    <img id="logo" src="Assets/Temporary_logo.jpg" width="70px" height="70px" alt="Logo" onclick="openPopup()">
+                </div>
+                <div class="Nav">
+                    <a href="Index.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Projects.html">Projects</a>
+                    <a href="Socials.html">Socials</a>
+                </div>
+            </header>
+            <section class="Main">
+                <article class="Content-Main">
+                    <h1>Videos</h1>
+                    <p>Here are some of my videos that I have uploaded on my Social medias. These are just a few of the many videos that I have uploaded, but these are some of my favorites that I wanted to showcase.</p>
+                </article>
+            </section>
+            <div class="seperator1"></div>
+            <section class="video-container">
+                <div class="video-card">
+                    <h3>Its not living if it's not with you - Monograph Edit</h3>
+                    <p class="video-description">Heres an edit I made using the song It's not living if it's not with you by the band The 1975.</p>
+                    <video width="560" height="315" controls>
+                        <source src="videos/It's not living if it's not with you monography edit.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-card">
+                    <h3>Day 4 of drawing everyday</h3>
+                    <p class="video-description">This video is challenge I set myself. Everyday I draw something from the wheel of characters and prompts.
+                        The prompt given was Ryo Yammada from the anime "Bocchi The Rock" "crashing out" (basically raging).
+                    </p>
+                    <video width="560" height="315" controls>
+                        <source src="videos/Day 4.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-card">
+                    <h3>Day 5 of drawing everyday</h3>
+                    <p class="video-description">This video is challenge I set myself. Everyday I draw something from the wheel of characters and prompts.
+                        The prompt given was  Kasane Teto and Mahoraga from the anime "Jujutsu Kaisen" "dapping each other up".
+                    </p>
+                    <video width="560" height="315" controls>
+                        <source src="videos/Day5.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <footer class="Main-Footer">
+            <div class="footer-content">
+                <div class="footer-section branding">
+                    <div class="Logo">
+                        <img src="Assets/Temporary_logo.jpg" width="50px" height="50px" alt="Logo">
+                    </div>
+                    <p>I like to code and create websites.</p>
+                </div>
+                <nav class="footer-section links">
+                    <h3>Navigation</h3>
+                    <div class="nav-row">
+                        <a href="Chapters.html">Dashboard</a>
+                        <a href="#top">Back to Top</a>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+        
+        <script src="Videos.js"></script>
+        
+        <div id="popup" class="popup-overlay" onclick="closePopup()">
+            <div class="popup-content" onclick="event.stopPropagation()">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <div class="popup-text">
+                    <h2>Sorry I got lazy with this page..</h2>
+                    <img src="Assets/sorry...jpeg" width="100px" height="100px" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
